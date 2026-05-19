@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMAC Transactions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobile-backdrop"></div>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">D</div>
+        <div><h2>DMAC Client</h2></div>
+      </div>
+      <div class="sidebar-nav">
+        <p class="sidebar-label">MAIN MENU</p>
+        <a href="dashboard.html" class="nav-item "><i class="fa-solid fa-chart-line"></i>Dashboard</a>
+        <a href="booking.html" class="nav-item "><i class="fa-solid fa-calendar-check"></i>Book Shipment</a>
+        <a href="billing.html" class="nav-item "><i class="fa-solid fa-wallet"></i>Billing</a>
+        <a href="order.html" class="nav-item "><i class="fa-solid fa-box"></i>Active Orders</a>
+        <a href="transactions.html" class="nav-item active"><i class="fa-solid fa-receipt"></i>Transactions</a>
+        <p class="sidebar-label">GENERAL</p>
+        <a href="#" class="nav-item"><i class="fa-solid fa-circle-question"></i>Help</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i>Settings</a>
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </div>
+      <div class="help-card">
+        <h3>Need Help?</h3>
+        <p>Contact DMAC support for assistance with bookings, billing, and shipments.</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <button class="icon-btn mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search shipments, billing..." /></div>
+        <div class="top-actions">
+          <button class="icon-btn notification-btn"><i class="fa-regular fa-bell"></i></button>
+          <button class="icon-btn dark-mode-btn"><i class="fa-solid fa-moon"></i></button>
+          <div class="profile-box"><div><strong>Rheeze Ayessa</strong><span>Client</span></div><div class="profile-avatar"><i class="fa-solid fa-user"></i></div></div>
+        </div>
+      </div>
+      <div class="page-header">
+        <div><h1>Transactions</h1><p>Review your previous shipment payment history.</p></div>
+        
+      </div>
+      <section class="card">
+        <div class="card-header"><div><h2>Transactions</h2><p>Review your previous shipment payment history.</p></div><a href="dashboard.html" class="primary-btn"><i class="fa-solid fa-arrow-left"></i>Back to Dashboard</a></div>
+        <div class="table-responsive"><table class="table"><thead><tr><th>Transaction Date/Time</th><th>Transaction ID</th><th>Delivered Date/Time</th><th>Booking Handler</th><th>Animal Type</th><th>Delivery Address</th><th>Paid Amount</th><th>Payment Type</th></tr></thead><tbody><tr><td>05/11/2026</td><td>TRX-001</td><td>Juan Dela Cruz</td><td>Gedde</td><td>Gamefowl</td><td>Rosario</td><td>₱20,000</td><td>GCash</td></tr>
+<tr><td>05/11/2026</td><td>TRX-002</td><td>Juan Dela Cruz</td><td>Gedde</td><td>Gamefowl</td><td>Rosario</td><td>₱20,000</td><td>GCash</td></tr>
+</tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

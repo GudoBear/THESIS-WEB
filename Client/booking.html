@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMAC Book Shipment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobile-backdrop"></div>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">D</div>
+        <div><h2>DMAC Client</h2></div>
+      </div>
+      <div class="sidebar-nav">
+        <p class="sidebar-label">MAIN MENU</p>
+        <a href="dashboard.html" class="nav-item "><i class="fa-solid fa-chart-line"></i>Dashboard</a>
+        <a href="booking.html" class="nav-item active"><i class="fa-solid fa-calendar-check"></i>Book Shipment</a>
+        <a href="billing.html" class="nav-item "><i class="fa-solid fa-wallet"></i>Billing</a>
+        <a href="order.html" class="nav-item "><i class="fa-solid fa-box"></i>Active Orders</a>
+        <a href="transactions.html" class="nav-item "><i class="fa-solid fa-receipt"></i>Transactions</a>
+        <p class="sidebar-label">GENERAL</p>
+        <a href="#" class="nav-item"><i class="fa-solid fa-circle-question"></i>Help</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i>Settings</a>
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </div>
+      <div class="help-card">
+        <h3>Need Help?</h3>
+        <p>Contact DMAC support for assistance with bookings, billing, and shipments.</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <button class="icon-btn mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search shipments, billing..." /></div>
+        <div class="top-actions">
+          <button class="icon-btn notification-btn"><i class="fa-regular fa-bell"></i></button>
+          <button class="icon-btn dark-mode-btn"><i class="fa-solid fa-moon"></i></button>
+          <div class="profile-box"><div><strong>Rheeze Ayessa</strong><span>Client</span></div><div class="profile-avatar"><i class="fa-solid fa-user"></i></div></div>
+        </div>
+      </div>
+      <div class="page-header">
+        <div><h1>Book Shipment</h1><p>Fill out the details below to create a shipment booking.</p></div>
+        
+      </div>
+      <section class="booking-card">
+        <div class="booking-steps">
+          <div class="step active" onclick="showTab('personal')"><span class="step-number">1</span><span class="step-text">Personal Details</span></div>
+          <div class="step" onclick="showTab('location')"><span class="step-number">2</span><span class="step-text">Location</span></div>
+          <div class="step" onclick="showTab('type')"><span class="step-number">3</span><span class="step-text">Type</span></div>
+        </div>
+        <div class="form-container">
+          <form>
+            <div id="personal" class="tab-content active">
+              <div class="card-header"><div><h2>Personal Details</h2><p>Enter sender and receiver information.</p></div></div>
+              <div class="form-row"><div class="form-group"><label for="fullname">Full Name</label><input type="text" id="fullname" name="fullname" placeholder="CLIENT'S NAME" required></div><div class="form-group"><label for="receivername">Receiver's Name</label><input type="text" id="receivername" name="receivername" placeholder="RECEIVER'S NAME" required></div></div>
+              <button type="button" class="next-button" onclick="validatePersonal()">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div id="location" class="tab-content">
+              <div class="card-header"><div><h2>Location</h2><p>Add pickup and delivery location details.</p></div></div>
+              <div class="form-group"><label for="location-input">Location</label><input type="text" id="location-input" name="location" placeholder="LOCATION" required></div>
+              <div class="form-row"><div class="form-group"><label for="region">Region</label><select id="region" name="region" required><option value="">Select Region</option><option value="region4a">Region IV-A</option><option value="mimaropa">MIMAROPA</option></select></div><div class="form-group"><label for="province">Province</label><select id="province" name="province" required><option value="">Select Province</option><option value="batangas">Batangas</option><option value="quezon">Quezon</option></select></div></div>
+              <div class="form-row"><div class="form-group"><label for="city">City</label><select id="city" name="city" required><option value="">Select City</option><option value="lucena">Lucena City</option><option value="batangas">Batangas City</option></select></div><div class="form-group"><label for="landmark">Nearest Landmark</label><input type="text" id="landmark" name="landmark" placeholder="e.g., SM City Batangas"></div></div>
+              <button type="button" class="next-button" onclick="validatelocation()">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div id="type" class="tab-content">
+              <div class="card-header"><div><h2>Shipment Type</h2><p>Select animal type, quantity, and payment method.</p></div></div>
+              <div class="form-row"><div class="form-group"><label for="animaltype">Animal Type</label><select id="animaltype" name="animaltype" required><option value="">Select Animal Type</option><option value="dog">Dog</option><option value="cat">Cat</option><option value="gamefowl">Gamefowl</option><option value="chicks">Chicks</option></select></div><div class="form-group"><label for="quantity">Animal Quantity</label><input type="number" id="quantity" name="quantity" placeholder="Number of animals" required></div></div>
+              <div class="form-group"><label for="method">Payment Method</label><select id="method" name="method" required><option value="">Select Payment Method</option><option value="cash">Cash</option><option value="gcash">GCash</option><option value="bank">Bank Transfer</option></select></div>
+              <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i>Book Shipment</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

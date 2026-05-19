@@ -1,0 +1,454 @@
+# accounting.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+
+  <title>Accounting</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"/>
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- MAIN CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"/>
+
+</head>
+
+<body>
+
+<div class="mobile-backdrop"></div>
+
+<div class="dashboard-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="brand">
+
+      <div class="brand-logo">
+        D
+      </div>
+
+      <div>
+        <h2>DMAC Admin</h2>
+      </div>
+
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <p class="sidebar-label">
+        MAIN MENU
+      </p>
+
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-line"></i>
+        Dashboard
+      </a>
+
+      <a href="pending-bookings.html" class="nav-item">
+        <i class="fa-solid fa-clock"></i>
+        Pending Bookings
+      </a>
+
+      <a href="pending-shipments.html" class="nav-item">
+        <i class="fa-solid fa-truck"></i>
+        Pending Shipments
+      </a>
+
+      <a href="shipments.html" class="nav-item">
+        <i class="fa-solid fa-box"></i>
+        Shipments
+      </a>
+
+      <a href="accounting.html" class="nav-item active">
+        <i class="fa-solid fa-wallet"></i>
+        Accounting
+      </a>
+
+      <p class="sidebar-label">
+        MANAGEMENT
+      </p>
+
+      <a href="customers.html" class="nav-item">
+        <i class="fa-solid fa-users"></i>
+        Customers
+      </a>
+
+      <a href="messages.html" class="nav-item">
+        <i class="fa-solid fa-message"></i>
+        Messages
+      </a>
+
+      <p class="sidebar-label">
+        GENERAL
+      </p>
+
+      <a href="settings.html" class="nav-item">
+        <i class="fa-solid fa-gear"></i>
+        Settings
+      </a>
+
+    </nav>
+
+    <!-- HELP CARD -->
+    <div class="help-card">
+
+      <h3>
+        Need help?
+      </h3>
+
+      <p>
+        Monitor payment records,
+        transactions,
+        and shipment earnings.
+      </p>
+
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+      <button class="icon-btn mobile-menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+          type="text"
+          placeholder="Search payment, booking, client..."/>
+
+      </div>
+
+      <div class="top-actions">
+
+        <button class="icon-btn notification-btn">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <div class="profile-box">
+
+          <div>
+            <strong>
+              DMAC Farm
+            </strong>
+
+            <span>
+              Admin Account
+            </span>
+          </div>
+
+          <div class="profile-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+
+      <div>
+
+        <h1>
+          Accounting
+        </h1>
+
+        <p>
+          Manage earnings,
+          payment records,
+          and completed shipment transactions.
+        </p>
+
+      </div>
+
+      <button class="primary-btn">
+
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+        Generate Report
+
+      </button>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+
+      <div class="stats-card green">
+
+        <p>
+          Total Earnings
+        </p>
+
+        <h2>
+          ₱193,000
+        </h2>
+
+        <span>
+          Completed payments only
+        </span>
+
+      </div>
+
+      <div class="stats-card purple">
+
+        <p>
+          GCash Payments
+        </p>
+
+        <h2>
+          ₱85,500
+        </h2>
+
+        <span>
+          Online wallet transactions
+        </span>
+
+      </div>
+
+      <div class="stats-card orange">
+
+        <p>
+          Bank Payments
+        </p>
+
+        <h2>
+          ₱45,500
+        </h2>
+
+        <span>
+          Bank transfer transactions
+        </span>
+
+      </div>
+
+      <div class="stats-card red">
+
+        <p>
+          Pending Payments
+        </p>
+
+        <h2>
+          ₱12,000
+        </h2>
+
+        <span>
+          Awaiting confirmation
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- ACCOUNTING TABLE -->
+    <section class="booking-card shipment-card">
+
+      <div class="card-header">
+
+        <div>
+
+          <h2>
+            Payment Records
+          </h2>
+
+          <p>
+            Cancelled bookings are automatically excluded.
+          </p>
+
+        </div>
+
+        <div class="table-actions">
+
+          <button class="filter-btn">
+            <i class="fa-solid fa-filter"></i>
+            Filters
+          </button>
+
+          <button class="export-btn">
+            <i class="fa-solid fa-download"></i>
+            Export
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- TABLE HEADER -->
+      <div class="shipment-history-header">
+
+        <span>Booking ID</span>
+        <span>Client Full Name</span>
+        <span>Payment Method</span>
+        <span>Paid Amount</span>
+        <span>Payment Status</span>
+        <span>Date Paid</span>
+
+      </div>
+
+      <!-- ROW -->
+      <div class="shipment-history-row">
+
+        <div class="booking-id">
+          BK-4001
+        </div>
+
+        <div>
+          Juan Dela Cruz
+        </div>
+
+        <div>
+          GCash
+        </div>
+
+        <div>
+          ₱12,500
+        </div>
+
+        <div>
+          <span class="status-badge ontime">
+            Paid
+          </span>
+        </div>
+
+        <div>
+          May 18, 2026
+        </div>
+
+      </div>
+
+      <!-- ROW -->
+      <div class="shipment-history-row">
+
+        <div class="booking-id">
+          BK-4002
+        </div>
+
+        <div>
+          Maria Santos
+        </div>
+
+        <div>
+          Bank Transfer
+        </div>
+
+        <div>
+          ₱18,000
+        </div>
+
+        <div>
+          <span class="status-badge ontime">
+            Paid
+          </span>
+        </div>
+
+        <div>
+          May 17, 2026
+        </div>
+
+      </div>
+
+      <!-- ROW -->
+      <div class="shipment-history-row">
+
+        <div class="booking-id">
+          BK-4003
+        </div>
+
+        <div>
+          Carlo Reyes
+        </div>
+
+        <div>
+          GCash
+        </div>
+
+        <div>
+          ₱9,500
+        </div>
+
+        <div>
+          <span class="status-badge delayed">
+            Pending
+          </span>
+        </div>
+
+        <div>
+          May 16, 2026
+        </div>
+
+      </div>
+
+      <!-- ROW -->
+      <div class="shipment-history-row">
+
+        <div class="booking-id">
+          BK-4004
+        </div>
+
+        <div>
+          Lorna Vega
+        </div>
+
+        <div>
+          Bank Transfer
+        </div>
+
+        <div>
+          ₱15,000
+        </div>
+
+        <div>
+          <span class="status-badge ontime">
+            Paid
+          </span>
+        </div>
+
+        <div>
+          May 15, 2026
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<!-- MAIN SCRIPT -->
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>
+```
+
+

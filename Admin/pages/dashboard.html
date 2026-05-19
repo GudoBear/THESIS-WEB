@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>DMAC Admin Dashboard</title>
+
+  <!-- GOOGLE FONT -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- MAIN CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  />
+
+</head>
+
+<body>
+
+  <!-- MOBILE BACKDROP -->
+  <div class="mobile-backdrop"></div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="brand-logo">
+          D
+        </div>
+
+        <div>
+          <h2>DMAC Admin</h2>
+        </div>
+
+      </div>
+
+      <div class="sidebar-nav">
+
+        <p class="sidebar-label">
+          MAIN MENU
+        </p>
+        <a href="dashboard.html" class="nav-item active">
+          <i class="fa-solid fa-chart-line"></i>
+          Dashboard
+        </a>
+        <a href="pending-bookings.html" class="nav-item">
+          <i class="fa-solid fa-calendar-check"></i>
+          Pending Bookings
+        </a>
+        <a href="pending-shipments.html" class="nav-item">
+          <i class="fa-solid fa-truck"></i>
+          Pending Shipments
+        </a>
+        <a href="shipments.html" class="nav-item">
+          <i class="fa-solid fa-box"></i>
+          Shipments
+        </a>
+        <a href="accounting.html" class="nav-item">
+          <i class="fa-solid fa-wallet"></i>
+          Accounting
+        </a>
+        <p class="sidebar-label">
+          MANAGEMENT
+        </p>
+        <a href="customers.html" class="nav-item">
+          <i class="fa-solid fa-users"></i>
+          Customers
+        </a>
+        <a href="messages.html" class="nav-item">
+          <i class="fa-solid fa-message"></i>
+          Messages
+        </a>
+        <p class="sidebar-label">
+          GENERAL
+        </p>
+        <a href="settings.html" class="nav-item">
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </a>
+      </div>
+      <!-- HELP CARD -->
+      <div class="help-card">
+        <h3>Need Help?</h3>
+        <p>
+          Contact support or visit our FAQ for
+          assistance with bookings and shipments.
+        </p>
+      </div>
+    </aside>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <button class="icon-btn mobile-menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search bookings, shipments..." />
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn notification-btn">
+            <i class="fa-regular fa-bell"></i>
+          </button>
+          <button class="icon-btn dark-mode-btn">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <div class="profile-box">
+            <div>
+              <strong>DMAC Farm</strong>
+              <span>Administrator</span>
+            </div>
+            <div class="profile-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+        <div>
+          <h1>
+            Admin Dashboard
+          </h1>
+          <p>
+            Monitor bookings, shipments,
+            and accounting in one place.
+          </p>
+        </div>
+        <button class="primary-btn">
+          <i class="fa-solid fa-plus"></i>
+          Add Shipment
+        </button>
+      </div>
+      <!-- STAtS -->
+      <div class="stats-grid">
+        <div class="stats-card green">
+          <p>Total Shipments</p>
+          <h2>245</h2>
+          <span>
+            +18% this month
+          </span>
+        </div>
+        <div class="stats-card purple">
+          <p>Pending Bookings</p>
+          <h2>32</h2>
+          <span>
+            Waiting for confirmation
+          </span>
+        </div>
+        <div class="stats-card orange">
+          <p>Pending Shipments</p>
+          <h2>18</h2>
+          <span>
+            Need vehicle assignment
+          </span>
+        </div>
+        <div class="stats-card red">
+          <p>Cancelled</p>
+          <h2>8</h2>
+          <span>
+            Shipment issues
+          </span>
+        </div>
+      </div>
+      <!-- MONTHLY REVENUE -->
+      <section class="card revenue-card">
+        <div class="card-header">
+          <div>
+            <h2>
+              Monthly Revenue
+            </h2>
+            <p>
+              Total earnings for this month
+            </p>
+          </div>
+          <button class="primary-btn">
+            <i class="fa-solid fa-chart-simple"></i>
+            Revenue Report
+          </button>
+        </div>
+        <div class="revenue-content">
+          <div class="revenue-main">
+            <h1>
+              ₱193,000
+            </h1>
+            <span class="revenue-growth">
+              +12.5% from last month
+            </span>
+          </div>
+          <div class="revenue-grid">
+            <div class="revenue-box">
+              <p>
+                GCash
+              </p>
+              <h3>
+                ₱85,500
+              </h3>
+            </div>
+            <div class="revenue-box">
+              <p>
+                Bank Transfer
+              </p>
+              <h3>
+                ₱45,500
+              </h3>
+            </div>
+            <div class="revenue-box">
+              <p>
+                Cash Payments
+              </p>
+              <h3>
+                ₱62,000
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <!-- SHIPMENT OVERVIEW -->
+      <section class="card financing-card">
+        <div class="card-header">
+          <div>
+            <h2>
+              Shipment Overview
+            </h2>
+            <p>
+              January 2024 - May 2024
+            </p>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stats-card green">
+            <p>
+              Monthly Shipments
+            </p>
+            <h2>
+              245
+            </h2>
+            <span>
+              Active & completed shipments
+            </span>
+          </div>
+          <div class="stats-card purple">
+            <p>
+              Pending Bookings
+            </p>
+            <h2>
+              32
+            </h2>
+            <span>
+              Waiting for handler assignment
+            </span>
+          </div>
+          <div class="stats-card orange">
+            <p>
+              Pending Shipments
+            </p>
+            <h2>
+              18
+            </h2>
+            <span>
+              Awaiting dispatch
+            </span>
+          </div>
+        </div>
+      </section>
+      <br />
+      <!-- TWO COLUMN SECTION -->
+      <div class="dashboard-two-grid">
+        <!-- PENDING TASKS -->
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <h2>
+                Pending Booking Tasks
+              </h2>
+              <p>
+                Requires admin action
+              </p>
+            </div>
+          </div>
+          <!-- ROW -->
+          <div class="booking-row">
+            <div class="client-info">
+              <strong>
+                BK-2024-021
+              </strong>
+              <small>
+                Juan Dela Cruz
+              </small>
+            </div>
+            <div>
+              Needs handler assignment
+            </div>
+            <div>
+              <select
+                class="custom-select status-select">
+                <option selected>
+                  Pending
+                </option>
+                <option>
+                  Review
+                </option>
+                <option>
+                  Confirmed
+                </option>
+              </select>
+            </div>
+            <button class="view-btn">
+              View
+            </button>
+          </div>
+          <!-- ROW -->
+          <div class="booking-row">
+            <div class="client-info">
+              <strong>
+                BK-2024-022
+              </strong>
+              <small>
+                Maria Santos
+              </small>
+            </div>
+            <div>
+              Waiting for status update
+            </div>
+            <div>
+              <select
+                class="custom-select status-select" >
+                <option selected>
+                  Pending
+                </option>
+                <option>
+                  Review
+                </option>
+                <option>
+                  Confirmed
+                </option>
+              </select>
+            </div>
+            <button class="view-btn">
+              View
+            </button>
+          </div>
+        </section>
+        <!-- RECENT SHIPMENTS -->
+        <section class="card draw-card">
+          <div class="card-header">
+            <div>
+              <h2>
+                Recent Shipments
+              </h2>
+              <p>
+                Latest shipment records
+              </p>
+            </div>
+          </div>
+          <!-- ROW -->
+          <div class="booking-row">
+            <div class="client-info">
+              <strong>
+                BK-2024-001
+              </strong>
+              <small>
+                Juan Dela Cruz
+              </small>
+            </div>
+            <div>
+              Chicken - 120 pcs
+            </div>
+            <div>
+              ₱12,500
+            </div>
+            <div>
+              <select
+                class="custom-select status-select" >
+                <option selected>
+                  Confirmed
+                </option>
+                <option>
+                  Pending
+                </option>
+                <option>
+                  Review
+                </option>
+              </select>
+            </div>
+            <button class="view-btn">
+              View
+            </button>
+          </div>
+          <!-- ROW -->
+          <div class="booking-row">
+            <div class="client-info">
+              <strong>
+                BK-2024-002
+              </strong>
+              <small>
+                Maria Santos
+              </small>
+            </div>
+            <div>
+              Pig - 8 heads
+            </div>
+            <div>
+              ₱18,000
+            </div>
+            <div>
+              <select
+                class="custom-select status-select">
+                <option selected>
+                  Review
+                </option>
+                <option>
+                  Pending
+                </option>
+                <option>
+                  Confirmed
+                </option>
+              </select>
+            </div>
+            <button class="view-btn">
+              View
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <!-- MAIN SCRIPT -->
+  <script src="../assets/js/script.js"></script>
+
+</body>
+</html>

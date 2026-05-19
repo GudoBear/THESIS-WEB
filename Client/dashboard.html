@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMAC Client Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobile-backdrop"></div>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">D</div>
+        <div><h2>DMAC Client</h2></div>
+      </div>
+      <div class="sidebar-nav">
+        <p class="sidebar-label">MAIN MENU</p>
+        <a href="dashboard.html" class="nav-item active"><i class="fa-solid fa-chart-line"></i>Dashboard</a>
+        <a href="booking.html" class="nav-item "><i class="fa-solid fa-calendar-check"></i>Book Shipment</a>
+        <a href="billing.html" class="nav-item "><i class="fa-solid fa-wallet"></i>Billing</a>
+        <a href="order.html" class="nav-item "><i class="fa-solid fa-box"></i>Active Orders</a>
+        <a href="transactions.html" class="nav-item "><i class="fa-solid fa-receipt"></i>Transactions</a>
+        <p class="sidebar-label">GENERAL</p>
+        <a href="#" class="nav-item"><i class="fa-solid fa-circle-question"></i>Help</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i>Settings</a>
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </div>
+      <div class="help-card">
+        <h3>Need Help?</h3>
+        <p>Contact DMAC support for assistance with bookings, billing, and shipments.</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <button class="icon-btn mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search shipments, billing..." /></div>
+        <div class="top-actions">
+          <button class="icon-btn notification-btn"><i class="fa-regular fa-bell"></i></button>
+          <button class="icon-btn dark-mode-btn"><i class="fa-solid fa-moon"></i></button>
+          <div class="profile-box"><div><strong>Rheeze Ayessa</strong><span>Client</span></div><div class="profile-avatar"><i class="fa-solid fa-user"></i></div></div>
+        </div>
+      </div>
+      <div class="page-header">
+        <div><h1>Client Dashboard</h1><p>Track your bookings, active orders, billing, and shipment progress.</p></div>
+        <a class="primary-btn" href="booking.html"><i class="fa-solid fa-plus"></i>Book Shipment</a>
+      </div>
+      <div class="stats-grid client-stats">
+        <div class="stats-card green"><p>Active Orders</p><h2>20</h2><span>Currently being processed</span></div>
+        <div class="stats-card purple"><p>Transactions</p><h2>20</h2><span>Previous completed payments</span></div>
+        <div class="stats-card orange"><p>In Transit</p><h2>13</h2><span>On the way to delivery</span></div>
+        <div class="stats-card red"><p>Pending Payment</p><h2>2</h2><span>Needs billing confirmation</span></div>
+      </div>
+      <section class="card revenue-card">
+        <div class="card-header"><div><h2>Shipment Progress</h2><p>Your current shipment status overview</p></div><a href="order.html" class="primary-btn"><i class="fa-solid fa-box"></i>View Orders</a></div>
+        <div class="progress-track"><div class="progress-fill" style="width:66%"></div></div>
+        <div class="progress-labels"><span class="active">Processing</span><span class="active">In Transit</span><span>Delivered</span></div>
+      </section>
+      <section class="card revenue-card">
+        <div class="card-header"><div><h2>Quick Actions</h2><p>Manage your shipment account faster.</p></div></div>
+        <div class="revenue-grid">
+          <div class="revenue-box"><p>Book</p><h3>New Shipment</h3><br><a href="booking.html" class="view-btn">Open</a></div>
+          <div class="revenue-box"><p>Check</p><h3>Billing</h3><br><a href="billing.html" class="view-btn">Open</a></div>
+          <div class="revenue-box"><p>View</p><h3>History</h3><br><a href="transactions.html" class="view-btn">Open</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

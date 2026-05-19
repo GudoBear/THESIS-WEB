@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+  <title>Pending Shipments</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"/>
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<!-- MOBILE BACKDROP -->
+<div class="mobile-backdrop"></div>
+
+<div class="dashboard-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="brand">
+      <div class="brand-logo">
+        D
+      </div>
+
+      <div>
+        <h2>DMAC Admin</h2>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <p class="sidebar-label">
+        MAIN MENU
+      </p>
+
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-line"></i>
+        Dashboard
+      </a>
+
+      <a href="pending-bookings.html" class="nav-item">
+        <i class="fa-solid fa-clock"></i>
+        Pending Bookings
+      </a>
+
+      <a
+        href="pending-shipments.html"
+        class="nav-item active">
+
+        <i class="fa-solid fa-truck"></i>
+        Pending Shipments
+      </a>
+
+      <a href="shipments.html" class="nav-item">
+        <i class="fa-solid fa-box"></i>
+        Shipments
+      </a>
+
+      <a href="accounting.html" class="nav-item">
+        <i class="fa-solid fa-wallet"></i>
+        Accounting
+      </a>
+
+      <p class="sidebar-label">
+        MANAGEMENT
+      </p>
+
+      <a href="customers.html" class="nav-item">
+        <i class="fa-solid fa-users"></i>
+        Customers
+      </a>
+
+      <a href="messages.html" class="nav-item">
+        <i class="fa-solid fa-message"></i>
+        Messages
+      </a>
+
+      <p class="sidebar-label">
+        GENERAL
+      </p>
+
+      <a href="settings.html" class="nav-item">
+        <i class="fa-solid fa-gear"></i>
+        Settings
+      </a>
+
+    </nav>
+
+    <!-- HELP CARD -->
+    <div class="help-card">
+      <h3>
+        Need help?
+      </h3>
+
+      <p>
+        Contact support for shipment
+        and vehicle assignment concerns.
+      </p>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+      <button class="icon-btn mobile-menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+          type="text"
+          placeholder="Search shipment, driver, vehicle..." />
+      </div>
+
+      <div class="top-actions">
+
+        <button class="icon-btn notification-btn">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <button class="icon-btn dark-mode-btn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="profile-box">
+
+          <div>
+            <strong>
+              DMAC Farm
+            </strong>
+
+            <span>
+              Admin Account
+            </span>
+          </div>
+
+          <div class="profile-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+
+      <div>
+        <h1>
+          Pending Shipments
+        </h1>
+
+        <p>
+          Assign shipment vehicles,
+          drivers, and statuses efficiently.
+        </p>
+      </div>
+
+      <button class="primary-btn">
+        <i class="fa-solid fa-plus"></i>
+        Add Shipment
+      </button>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+
+      <div class="stats-card green">
+        <p>
+          Pending Shipments
+        </p>
+
+        <h2>
+          18
+        </h2>
+
+        <span>
+          Need assignment
+        </span>
+      </div>
+
+      <div class="stats-card purple">
+        <p>
+          Active Drivers
+        </p>
+
+        <h2>
+          12
+        </h2>
+
+        <span>
+          Assigned drivers
+        </span>
+      </div>
+
+      <div class="stats-card orange">
+        <p>
+          Vehicles Ready
+        </p>
+
+        <h2>
+          9
+        </h2>
+
+        <span>
+          Available for dispatch
+        </span>
+      </div>
+
+      <div class="stats-card red">
+        <p>
+          Delayed
+        </p>
+
+        <h2>
+          3
+        </h2>
+
+        <span>
+          Requires follow-up
+        </span>
+      </div>
+
+    </div>
+
+    <!-- SHIPMENT TABLE -->
+    <section class="booking-card shipment-card">
+
+      <div class="card-header">
+
+        <div>
+          <h2>
+            Shipment Management
+          </h2>
+
+          <p>
+            Manage shipment assignments efficiently.
+          </p>
+        </div>
+
+        <div class="table-actions">
+
+          <button class="filter-btn">
+            <i class="fa-solid fa-filter"></i>
+            Filters
+          </button>
+
+          <button class="export-btn">
+            <i class="fa-solid fa-download"></i>
+            Export
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- TABLE HEADER -->
+      <div class="shipment-table-header">
+
+        <span>
+          Booking ID
+        </span>
+
+        <span>
+          Client ID
+        </span>
+
+        <span>
+          Vehicle Plate No.
+        </span>
+
+        <span>
+          Shipment Driver
+        </span>
+
+        <span>
+          Shipment Status
+        </span>
+
+      </div>
+
+      <!-- ROW -->
+      <div class="shipment-row">
+
+        <div class="booking-id">
+          BK-2051
+        </div>
+
+        <div class="client-id">
+          CL-1001
+        </div>
+
+        <select class="custom-select">
+          <option>Select Vehicle</option>
+          <option>ABC-1234</option>
+          <option>XYZ-4421</option>
+          <option>QWE-5510</option>
+        </select>
+
+        <select class="custom-select">
+          <option>Assign Driver</option>
+          <option>Juan Reyes</option>
+          <option>Rico Santos</option>
+          <option>Mark Dela Cruz</option>
+        </select>
+
+        <select class="custom-select status-select">
+          <option selected>Pending</option>
+          <option>In Transit</option>
+          <option>Delivered</option>
+          <option>Delayed</option>
+          <option>Cancelled</option>
+        </select>
+
+      </div>
+
+      <!-- ROW -->
+      <div class="shipment-row">
+
+        <div class="booking-id">
+          BK-2052
+        </div>
+
+        <div class="client-id">
+          CL-1002
+        </div>
+
+        <select class="custom-select">
+          <option>DEF-8841</option>
+          <option>XYZ-4421</option>
+          <option>ABC-1234</option>
+        </select>
+
+        <select class="custom-select">
+          <option>Rico Santos</option>
+          <option>Juan Reyes</option>
+          <option>Mark Dela Cruz</option>
+        </select>
+
+        <select class="custom-select status-select">
+          <option>Pending</option>
+          <option selected>In Transit</option>
+          <option>Delivered</option>
+        </select>
+
+      </div>
+
+      <!-- ROW -->
+      <div class="shipment-row">
+
+        <div class="booking-id">
+          BK-2053
+        </div>
+
+        <div class="client-id">
+          CL-1003
+        </div>
+
+        <select class="custom-select">
+          <option>HIJ-2210</option>
+          <option>DEF-8841</option>
+          <option>ABC-1234</option>
+        </select>
+
+        <select class="custom-select">
+          <option>Mark Dela Cruz</option>
+          <option>Rico Santos</option>
+          <option>Juan Reyes</option>
+        </select>
+
+        <select class="custom-select status-select">
+          <option>Pending</option>
+          <option>In Transit</option>
+          <option selected>Delivered</option>
+        </select>
+
+      </div>
+
+      <!-- SAVE BUTTON -->
+      <div class="save-container">
+
+        <button class="save-btn">
+          <i class="fa-solid fa-check"></i>
+          Save Changes
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<!-- MAIN SCRIPT -->
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>

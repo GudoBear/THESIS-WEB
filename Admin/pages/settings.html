@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<div class="mobile-backdrop"></div>
+
+<div class="dashboard-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="brand">
+      <div class="brand-logo">D</div>
+      <div>
+        <h2>DMAC Admin</h2>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <p class="sidebar-label">MAIN MENU</p>
+
+      <a href="dashboard.html" class="nav-item">Dashboard</a>
+      <a href="pending-bookings.html" class="nav-item">Pending Bookings</a>
+      <a href="pending-shipments.html" class="nav-item">Pending Shipments</a>
+      <a href="shipments.html" class="nav-item">Shipments</a>
+      <a href="accounting.html" class="nav-item">Accounting</a>
+       <p class="sidebar-label">
+          MANAGEMENT
+        </p>
+        <a href="customers.html" class="nav-item">
+          <i class="fa-solid fa-users"></i>
+          Customers
+        </a>
+        <a href="messages.html" class="nav-item">
+          <i class="fa-solid fa-message"></i>
+          Messages
+        </a>
+      <p class="sidebar-label">GENERAL</p>
+
+      <a href="settings.html" class="nav-item active">
+        <i class="fa-solid fa-gear"></i>
+        Settings
+      </a>
+
+    </nav>
+
+    <div class="help-card">
+      <h3>Need help?</h3>
+      <p>Contact support for system settings and configuration help.</p>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <div class="page-header">
+      <div>
+        <h1>Settings</h1>
+        <p>Manage system preferences and admin configuration.</p>
+      </div>
+    </div>
+
+    <section class="booking-card">
+
+      <div class="card-header">
+        <div>
+          <h2>Account Settings</h2>
+          <p>Update your admin profile and preferences</p>
+        </div>
+      </div>
+
+      <div style="display:grid; gap:16px; max-width:500px;">
+
+        <input class="custom-select" type="text" placeholder="Admin Name" />
+        <input class="custom-select" type="email" placeholder="Email Address" />
+        <input class="custom-select" type="password" placeholder="New Password" />
+
+        <button class="save-btn">
+          <i class="fa-solid fa-check"></i>
+          Save Settings
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>

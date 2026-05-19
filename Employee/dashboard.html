@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Dashboard</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+           <img src="logo.png" alt="logo">
+            <span class="logo-text">DMAC INVENTORY</span>
+        </div>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="dashboard.html">
+                <span class="icon">
+                    <i class="bi bi-grid"></i>
+                </span>
+                <span class="description-active">Dashboard</span>
+            </a>
+
+            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false" aria-controls="submenu">
+                <span class="icon">
+                    <i class="bi bi-box"></i>
+                </span>
+                <span class="description">Container   <i class="bi bi-caret-down-fill"></i></span>
+            </a>
+
+            <div class="sub-menu collapse" id="submenu">
+                <a class="nav-link" href="boxes.html">
+                    <span class="icon">
+                        <i class="bi bi-box2"></i>
+                    </span>
+                    <span class="description"></i> Boxes</span>
+
+                </a>
+
+                <a class="nav-link" href="cages.html">
+                    <span class="icon">
+                        <i class="bi bi-grid-3x3"></i>
+                    </span>
+                    <span class="description">Cage</span> 
+                    
+                </a>
+            </div>
+
+
+            <a class="nav-link" href="medicine.html">
+                <span class="icon">
+                    <i class="bi bi-prescription"></i>
+                </span>
+                <span class="description">Medicine</span>
+            </a>
+
+            <a class="nav-link" href="feeds.html">
+                <span class="icon">
+                    <i class="bi bi-basket3"></i>
+                </span>
+                <span class="description">Feeds</span>
+            </a>
+
+            <div class="logout">
+                <a class="nav-link" href="#">
+                    <span class="description">Logout</span>
+                    <span class="icon">
+                    <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+<main>
+<div class="container-fluid">
+<div class="main-content">
+    <div class="page-header">
+        <h1>INVENTORY OVERVIEW</h1>
+        <p class="fst-italic">summary inventory of the containers: boxes and cages, medicine, and feeds.</p>
+    </div>
+
+    <div class="overview-cards">
+            <div class="overview-card card-boxes">
+                <h2>Boxes</h2>
+                <p class="count">128</p>
+                <p class="label">Total boxes available</p>
+            </div>
+            <div class="overview-card card-cages">
+                <h2>Cages</h2>
+                <p class="count">42</p>
+                <p class="label">Total cages available</p>
+            </div>
+            <div class="overview-card card-medicine">
+                <h2>Medicine</h2>
+                <p class="count">217</p>
+                <p class="label">Total medicine items</p>
+            </div>
+            <div class="overview-card card-feeds">
+                <h2>Feeds</h2>
+                <p class="count">89</p>
+                <p class="label">Total feed items</p>
+            </div>
+        </div>
+
+    <section class="overview-details">
+        <h3>Quick Breakdown</h3>
+        <div class="detail-row">
+        <div>
+    <h2 class="text-center">Reserved Boxes</h2>
+    <p class="text-table">Boxes that are currently reserved from booking.</p>
+        <table class="table w-100 table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>Size</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+
+            <tbody>
+                <tr>
+                  <td>Small</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td>42</td>
+                </tr>
+            </tbody>
+
+            </table>
+
+            <a href="reserved-boxes.html" class="btn btn-primary d-block" role="button">View Reserved Boxes</a>   
+            </div>
+
+
+    <div>
+    <h2 class="text-center">Reserved Cages</h2>
+    <p class="text-table">Cages that are currently reserved from booking.</p>
+        <table class="table w-100 table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>Size</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+
+            <tbody>
+                <tr>
+                  <td>Small</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td>6</td>
+                </tr>
+            </tbody>
+
+            </table>
+
+            <a href="reserved-cages.html" class="btn btn-primary d-block" role="button">View Reserved Cages</a>
+
+                </div>
+                
+    <div>
+    <h2 class="text-center">Medicine</h2>
+    <p class="text-table">Medicine items that are already opened:</p>
+        <table class="table w-100 table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Type</th>
+                  <th>Medicine Name</th>
+                  
+                </tr>
+              </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                  <td>Antibiotics</td>
+                    <td>Amoxicillin</td>
+                  
+                </tr>
+                <tr>
+                    <td>2</td>  
+                  <td>Vaccines</td>
+                    <td>Rabies Vaccine</td>
+                  
+                </tr>
+                <tr>
+                    <td>3</td>
+                  <td>Vitamins</td>
+                    <td>Vitamin C</td>
+                </tr>
+            </tbody>
+
+        </table>
+        
+        <a href="opened-med.html" class="btn btn-primary d-block" role="button">View Opened Medicines</a>
+
+        <p class="text-table">Medicine items that are low on stock (less than 5 items):
+        </p>
+        <table class="table w-100 table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Medicine Type</th>
+                  <th>Stock Level</th>
+                  
+                </tr>
+              </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                  <td>Antibiotics</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                    <td>2</td>  
+                  <td>Vaccines</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                  <td>Vitamins</td>
+                  <td>2</td>
+                </tr>
+            </tbody>
+
+        </table>
+       
+        <a href="restock-med.html" class="btn btn-primary d-block" role="button">View Details</a>
+        
+    </div>
+
+    <div>
+    <h2 class="text-center">Feeds</h2>
+    <p class="text-table">Feeds that are currently open:</p>
+        <table class="table w-100 table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Feed Type</th>
+                  <th>Feed Name</th>
+                </tr>
+              </thead>
+
+            <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Pellet</td>
+                  <td>Feed A</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Crumbles</td>
+                  <td>Feed B</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Powder</td>
+                  <td>Feed C</td>
+                </tr>
+
+            </tbody>
+            
+            </table>
+            <button class="btn btn-primary d-block mx-auto mb-3">View Details</button>
+
+        <p class="text-table">Feeds sacks that are low on stock (1 sack remaining):</p>
+        <table class="table w-100 table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Feed Type</th>
+                  <th>Feed Name</th>
+                </tr>
+              </thead>
+
+            <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Pellet</td>
+                  <td>Feed A</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Crumbles</td>
+                  <td>Feed B</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Powder</td>
+                  <td>Feed C</td>
+                </tr>
+            </tbody>
+
+            </table>
+            <button class="btn btn-primary d-block mx-auto ">View Details</button>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+</main>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

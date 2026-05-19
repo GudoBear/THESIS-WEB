@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMAC Billing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobile-backdrop"></div>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">D</div>
+        <div><h2>DMAC Client</h2></div>
+      </div>
+      <div class="sidebar-nav">
+        <p class="sidebar-label">MAIN MENU</p>
+        <a href="dashboard.html" class="nav-item "><i class="fa-solid fa-chart-line"></i>Dashboard</a>
+        <a href="booking.html" class="nav-item "><i class="fa-solid fa-calendar-check"></i>Book Shipment</a>
+        <a href="billing.html" class="nav-item active"><i class="fa-solid fa-wallet"></i>Billing</a>
+        <a href="order.html" class="nav-item "><i class="fa-solid fa-box"></i>Active Orders</a>
+        <a href="transactions.html" class="nav-item "><i class="fa-solid fa-receipt"></i>Transactions</a>
+        <p class="sidebar-label">GENERAL</p>
+        <a href="#" class="nav-item"><i class="fa-solid fa-circle-question"></i>Help</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i>Settings</a>
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </div>
+      <div class="help-card">
+        <h3>Need Help?</h3>
+        <p>Contact DMAC support for assistance with bookings, billing, and shipments.</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <button class="icon-btn mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search shipments, billing..." /></div>
+        <div class="top-actions">
+          <button class="icon-btn notification-btn"><i class="fa-regular fa-bell"></i></button>
+          <button class="icon-btn dark-mode-btn"><i class="fa-solid fa-moon"></i></button>
+          <div class="profile-box"><div><strong>Rheeze Ayessa</strong><span>Client</span></div><div class="profile-avatar"><i class="fa-solid fa-user"></i></div></div>
+        </div>
+      </div>
+      <div class="page-header">
+        <div><h1>Payments & Billing</h1><p>Manage booking payment methods and billing details.</p></div>
+        
+      </div>
+      <section class="payment-section">
+        <div class="card-header"><div><h2>Payment Method</h2><p>Choose how you want to pay for your booking.</p></div></div>
+        <form>
+          <div class="form-option"><input type="radio" id="gcash" name="payment" value="gcash"><label for="gcash">GCash</label></div>
+          <div class="form-option"><input type="radio" id="card" name="payment" value="card"><label for="card">Credit/Debit Card</label></div>
+          <div id="gcash-details" class="hidden"><p>Scan the QR code below to pay with GCash:</p><br><img src="images/qr.jpg" alt="GCash QR Code" style="max-width:200px;border-radius:18px;"></div>
+          <div id="card-details" class="hidden"><div class="form-row"><div class="form-group"><input type="text" id="firstname" name="firstname" placeholder="First Name"></div><div class="form-group"><input type="text" id="lastname" name="lastname" placeholder="Last Name"></div></div><div class="form-group"><input type="text" id="cardnumber" name="cardnumber" placeholder="Card Number"></div><div class="form-row"><div class="form-group"><input type="text" id="expiry" name="expiry" placeholder="Expiry Date (MM/YY)"></div><div class="form-group"><input type="text" id="cvv" name="cvv" placeholder="CVV"></div></div></div>
+        </form>
+        <br><div class="card-header"><div><h2>Booking Payment Details</h2><p>Review the current charges.</p></div></div>
+        <div class="payment-details"><div class="payment-row"><span>Amount</span><span>₱0.00</span></div><div class="payment-row"><span>Container Fee</span><span>₱0.00</span></div><div class="payment-row"><span>Shipping Fee</span><span>₱0.00</span></div><div class="payment-row"><span>Total</span><span>₱0.00</span></div></div>
+        <button class="pay-btn"><i class="fa-solid fa-credit-card"></i>Pay Now</button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

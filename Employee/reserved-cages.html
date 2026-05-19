@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Dashboard</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+           <img src="logo.png" alt="logo">
+            <span class="logo-text">DMAC INVENTORY</span>
+        </div>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="dashboard.html">
+                <span class="icon">
+                    <i class="bi bi-grid"></i>
+                </span>
+                <span class="description">Dashboard</span>
+            </a>
+
+            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false" aria-controls="submenu">
+                <span class="icon">
+                    <i class="bi bi-box"></i>
+                </span>
+                <span class="description-active">Container   <i class="bi bi-caret-down-fill"></i></span>
+            </a>
+
+            <div class="sub-menu collapse" id="submenu">
+                <a class="nav-link" href="boxes.html">
+                    <span class="icon">
+                        <i class="bi bi-box2"></i>
+                    </span>
+                    <span class="description-active"></i> Boxes</span>
+
+                </a>
+
+                <a class="nav-link" href="cages.html">
+                    <span class="icon">
+                        <i class="bi bi-grid-3x3"></i>
+                    </span>
+                    <span class="description">Cage</span> 
+                    
+                </a>
+            </div>
+
+
+            <a class="nav-link" href="medicine.html">
+                <span class="icon">
+                    <i class="bi bi-prescription"></i>
+                </span>
+                <span class="description">Medicine</span>
+            </a>
+
+            <a class="nav-link" href="feeds.html">
+                <span class="icon">
+                    <i class="bi bi-basket3"></i>
+                </span>
+                <span class="description">Feeds</span>
+            </a>
+
+            <div class="logout">
+                <a class="nav-link" href="#">
+                    <span class="description">Logout</span>
+                    <span class="icon">
+                    <i class="bi bi-box-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+<main>
+<div class="container-fluid px-4">
+    
+    <div class="main-content row gx-4 gy-4">
+ <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="cages.html">Summary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="reserved-cages.html">Reserved Cages</a>
+        </li>
+        
+      </ul>
+    </div>
+    </nav>
+
+        <div class="card text-center">
+        <h4 class="card-header mb-2">Reserve a Cage! (Available Cages)</h4>
+         
+        <div class="card">
+            <form class="py-3">
+                <div class="row g-3 align-items-center">
+                    <div class="col">
+                <label for="client" class="col-form-label">Booking ID - Client name:</label>
+            </div>
+            <div class="col">
+                <select class="form-select" aria-label="Default select example">
+  <option selected>select client</option>
+  <option value="1">[1] Jean</option>
+  <option value="2">[2] Ayet</option>
+  <option value="3">[3] Margaret</option>
+</select>
+            </div>
+            <div class="col">
+                <label for="reservebox" class="col-form-label">Cage ID:</label>
+            </div>
+                <div class="col">
+                <input type="number" class="form-control" id="reservebox" placeholder="e.g 505, 506">
+            </div>
+            <div class="col">
+      <button type="submit" class="btn btn-primary">Reserve</button>
+      </div>
+      </div>
+            </form>
+        </div>
+        
+        <table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Small Cage ID</th>
+            <th scope="col">Medium Cage ID</th>
+            <th scope="col">Large Cage ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">550</th>
+            <th scope="row">650</th>
+            <th scope="row">750</th>
+        </tr>
+       <tr>
+            <th scope="row">551</th>
+            <th scope="row">651</th>
+            <th scope="row">751</th>
+        </tr>
+        <tr>
+            <th scope="row">552</th>
+            <th scope="row">651</th>
+            <th scope="row">751</th>
+        </tr>
+    </tbody>
+</table>
+
+    <div class="row px-5">
+    
+
+</div>
+
+        </div>
+        
+    <div class="card p-4">
+        
+        <h2 class="card-title text-center mb-3">Reserved Cages</h2>
+        <div class="overview-cards">
+            <div class="overview-card">
+                <p class="count">3</p>
+                <h2>Total Reserved Cages</h2>
+            </div>
+            <div class="overview-card">
+                <p class="count">3</p>
+                <h2>Small</h2>
+            </div>
+            <div class="overview-card card-medicine">
+                <p class="count">0</p>
+                <h2>Medium</h2>
+            </div>
+            <div class="overview-card card-medicine">
+                <p class="count">0</p>
+                <h2>Large</h2>
+            </div>
+        </div>
+        <table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Booking id</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">Cage id</th>
+            <th scope="col">Cage Size</th>
+            <th scope="col">Container Status</th>
+            <th scope="col">Processed By</th>
+            <th scope="col">Last Updated</th>
+            <th scope="col">Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>riz</td>
+            <td>505</td>
+            <td>small</td>
+            <td>available</td>
+            <td>Dr. Smith</td>
+            <td>2023-10-01</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+       <tr>
+            <th scope="row">2</th>
+            <td>riz</td>
+            <td>505</td>
+            <td>small</td>
+            <td>reserved</td>
+            <td>Dr. Smith</td>
+            <td>2023-10-01</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>riz</td>
+            <td>505</td>
+            <td>small</td>
+            <td>available</td>
+            <td>Dr. Smith</td>
+            <td>2023-10-01</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+
+   
+</div>
+</div>
+
+
+
+</main>
+
+
+
+
+    
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
