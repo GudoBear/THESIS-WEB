@@ -45,29 +45,54 @@
           <div class="profile-box"><div><strong>Rheeze Ayessa</strong><span>Client</span></div><div class="profile-avatar"><i class="fa-solid fa-user"></i></div></div>
         </div>
       </div>
-      <div class="page-header">
-        <div><h1>Client Dashboard</h1><p>Track your bookings, active orders, billing, and shipment progress.</p></div>
-        <a class="primary-btn" href="booking.html"><i class="fa-solid fa-plus"></i>Book Shipment</a>
-      </div>
-      <div class="stats-grid client-stats">
-        <div class="stats-card green"><p>Active Orders</p><h2>20</h2><span>Currently being processed</span></div>
-        <div class="stats-card purple"><p>Transactions</p><h2>20</h2><span>Previous completed payments</span></div>
-        <div class="stats-card orange"><p>In Transit</p><h2>13</h2><span>On the way to delivery</span></div>
-        <div class="stats-card red"><p>Pending Payment</p><h2>2</h2><span>Needs billing confirmation</span></div>
-      </div>
-      <section class="card revenue-card">
-        <div class="card-header"><div><h2>Shipment Progress</h2><p>Your current shipment status overview</p></div><a href="order.html" class="primary-btn"><i class="fa-solid fa-box"></i>View Orders</a></div>
-        <div class="progress-track"><div class="progress-fill" style="width:66%"></div></div>
-        <div class="progress-labels"><span class="active">Processing</span><span class="active">In Transit</span><span>Delivered</span></div>
-      </section>
-      <section class="card revenue-card">
-        <div class="card-header"><div><h2>Quick Actions</h2><p>Manage your shipment account faster.</p></div></div>
-        <div class="revenue-grid">
-          <div class="revenue-box"><p>Book</p><h3>New Shipment</h3><br><a href="booking.html" class="view-btn">Open</a></div>
-          <div class="revenue-box"><p>Check</p><h3>Billing</h3><br><a href="billing.html" class="view-btn">Open</a></div>
-          <div class="revenue-box"><p>View</p><h3>History</h3><br><a href="transactions.html" class="view-btn">Open</a></div>
+      <section class="client-hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="fa-solid fa-leaf"></i> Premium logistics overview</span>
+          <h1>Welcome back, Rheeze</h1>
+          <p>Monitor your shipments, payments, and delivery progress in one clean dashboard.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="booking.html"><i class="fa-solid fa-plus"></i>Book Shipment</a>
+            <a class="secondary-btn" href="order.html"><i class="fa-solid fa-box-open"></i>View Orders</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <p>Current Progress</p>
+          <h2>66%</h2>
+          <span>13 shipments in transit</span>
+          <div class="hero-mini-track"><div style="width:66%"></div></div>
         </div>
       </section>
+
+      <div class="stats-grid client-stats elegant-stats">
+        <div class="stats-card green"><div class="stat-icon"><i class="fa-solid fa-boxes-stacked"></i></div><p>Active Orders</p><h2>20</h2><span>Currently being processed</span></div>
+        <div class="stats-card purple"><div class="stat-icon"><i class="fa-solid fa-receipt"></i></div><p>Transactions</p><h2>20</h2><span>Previous completed payments</span></div>
+        <div class="stats-card orange"><div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div><p>In Transit</p><h2>13</h2><span>On the way to delivery</span></div>
+        <div class="stats-card red"><div class="stat-icon"><i class="fa-solid fa-credit-card"></i></div><p>Pending Payment</p><h2>2</h2><span>Needs billing confirmation</span></div>
+      </div>
+
+      <div class="client-dashboard-grid">
+        <section class="card revenue-card elegant-card">
+          <div class="card-header"><div><h2>Shipment Progress</h2><p>Your current shipment status overview</p></div><a href="order.html" class="secondary-btn compact"><i class="fa-solid fa-arrow-right"></i>View Orders</a></div>
+          <div class="timeline-progress">
+            <div class="timeline-step done"><i class="fa-solid fa-check"></i><strong>Processing</strong><span>Order confirmed</span></div>
+            <div class="timeline-line active"></div>
+            <div class="timeline-step done"><i class="fa-solid fa-truck"></i><strong>In Transit</strong><span>On the way</span></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-step"><i class="fa-solid fa-house-chimney"></i><strong>Delivered</strong><span>Awaiting delivery</span></div>
+          </div>
+          <div class="progress-track"><div class="progress-fill" style="width:66%"></div></div>
+          <div class="progress-labels"><span class="active">Processing</span><span class="active">In Transit</span><span>Delivered</span></div>
+        </section>
+
+        <section class="card revenue-card elegant-card quick-action-card">
+          <div class="card-header"><div><h2>Quick Actions</h2><p>Manage your shipment account faster.</p></div></div>
+          <div class="revenue-grid elegant-actions">
+            <a href="booking.html" class="revenue-box"><i class="fa-solid fa-calendar-plus"></i><p>Book</p><h3>New Shipment</h3><span>Start a delivery request</span></a>
+            <a href="billing.html" class="revenue-box"><i class="fa-solid fa-wallet"></i><p>Check</p><h3>Billing</h3><span>Review payment status</span></a>
+            <a href="transactions.html" class="revenue-box"><i class="fa-solid fa-clock-rotate-left"></i><p>View</p><h3>History</h3><span>See past transactions</span></a>
+          </div>
+        </section>
+      </div>
     </main>
   </div>
   <script src="script.js"></script>

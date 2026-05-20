@@ -150,313 +150,85 @@
           </div>
         </div>
       </div>
-      <!-- PAGE HEADER -->
-      <div class="page-header">
-        <div>
-          <h1>
-            Admin Dashboard
-          </h1>
-          <p>
-            Monitor bookings, shipments,
-            and accounting in one place.
-          </p>
-        </div>
-        <button class="primary-btn">
-          <i class="fa-solid fa-plus"></i>
-          Add Shipment
-        </button>
-      </div>
-      <!-- STAtS -->
-      <div class="stats-grid">
-        <div class="stats-card green">
-          <p>Total Shipments</p>
-          <h2>245</h2>
-          <span>
-            +18% this month
-          </span>
-        </div>
-        <div class="stats-card purple">
-          <p>Pending Bookings</p>
-          <h2>32</h2>
-          <span>
-            Waiting for confirmation
-          </span>
-        </div>
-        <div class="stats-card orange">
-          <p>Pending Shipments</p>
-          <h2>18</h2>
-          <span>
-            Need vehicle assignment
-          </span>
-        </div>
-        <div class="stats-card red">
-          <p>Cancelled</p>
-          <h2>8</h2>
-          <span>
-            Shipment issues
-          </span>
-        </div>
-      </div>
-      <!-- MONTHLY REVENUE -->
-      <section class="card revenue-card">
-        <div class="card-header">
-          <div>
-            <h2>
-              Monthly Revenue
-            </h2>
-            <p>
-              Total earnings for this month
-            </p>
+      <section class="admin-hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="fa-solid fa-seedling"></i> Premium admin control center</span>
+          <h1>Admin Dashboard</h1>
+          <p>Monitor bookings, shipments, revenue, and daily operations in one elegant workspace.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="shipments.html"><i class="fa-solid fa-plus"></i>Add Shipment</a>
+            <a class="secondary-btn" href="pending-bookings.html"><i class="fa-solid fa-calendar-check"></i>Review Bookings</a>
           </div>
-          <button class="primary-btn">
-            <i class="fa-solid fa-chart-simple"></i>
-            Revenue Report
-          </button>
         </div>
-        <div class="revenue-content">
-          <div class="revenue-main">
-            <h1>
-              ₱193,000
-            </h1>
-            <span class="revenue-growth">
-              +12.5% from last month
-            </span>
-          </div>
-          <div class="revenue-grid">
-            <div class="revenue-box">
-              <p>
-                GCash
-              </p>
-              <h3>
-                ₱85,500
-              </h3>
-            </div>
-            <div class="revenue-box">
-              <p>
-                Bank Transfer
-              </p>
-              <h3>
-                ₱45,500
-              </h3>
-            </div>
-            <div class="revenue-box">
-              <p>
-                Cash Payments
-              </p>
-              <h3>
-                ₱62,000
-              </h3>
-            </div>
-          </div>
+        <div class="hero-panel admin-panel">
+          <p>Monthly Revenue</p>
+          <h2>₱193K</h2>
+          <span>+12.5% from last month</span>
+          <div class="hero-mini-track"><div style="width:76%"></div></div>
         </div>
       </section>
-      <br />
-      <!-- SHIPMENT OVERVIEW -->
-      <section class="card financing-card">
-        <div class="card-header">
-          <div>
-            <h2>
-              Shipment Overview
-            </h2>
-            <p>
-              January 2024 - May 2024
-            </p>
-          </div>
-        </div>
-        <div class="stats-grid">
-          <div class="stats-card green">
-            <p>
-              Monthly Shipments
-            </p>
-            <h2>
-              245
-            </h2>
-            <span>
-              Active & completed shipments
-            </span>
-          </div>
-          <div class="stats-card purple">
-            <p>
-              Pending Bookings
-            </p>
-            <h2>
-              32
-            </h2>
-            <span>
-              Waiting for handler assignment
-            </span>
-          </div>
-          <div class="stats-card orange">
-            <p>
-              Pending Shipments
-            </p>
-            <h2>
-              18
-            </h2>
-            <span>
-              Awaiting dispatch
-            </span>
-          </div>
-        </div>
-      </section>
-      <br />
-      <!-- TWO COLUMN SECTION -->
-      <div class="dashboard-two-grid">
-        <!-- PENDING TASKS -->
-        <section class="card">
+
+      <div class="stats-grid elegant-stats admin-stats">
+        <div class="stats-card green"><div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div><p>Total Shipments</p><h2>245</h2><span>+18% this month</span></div>
+        <div class="stats-card purple"><div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div><p>Pending Bookings</p><h2>32</h2><span>Waiting for confirmation</span></div>
+        <div class="stats-card orange"><div class="stat-icon"><i class="fa-solid fa-box-open"></i></div><p>Pending Shipments</p><h2>18</h2><span>Need vehicle assignment</span></div>
+        <div class="stats-card red"><div class="stat-icon"><i class="fa-solid fa-circle-xmark"></i></div><p>Cancelled</p><h2>8</h2><span>Shipment issues</span></div>
+      </div>
+
+      <div class="admin-dashboard-grid">
+        <section class="card revenue-card elegant-card admin-revenue-card">
           <div class="card-header">
-            <div>
-              <h2>
-                Pending Booking Tasks
-              </h2>
-              <p>
-                Requires admin action
-              </p>
-            </div>
+            <div><h2>Revenue Summary</h2><p>Total earnings for this month</p></div>
+            <a href="accounting.html" class="secondary-btn compact"><i class="fa-solid fa-chart-simple"></i>Revenue Report</a>
           </div>
-          <!-- ROW -->
-          <div class="booking-row">
-            <div class="client-info">
-              <strong>
-                BK-2024-021
-              </strong>
-              <small>
-                Juan Dela Cruz
-              </small>
+          <div class="revenue-content admin-revenue-content">
+            <div class="revenue-main">
+              <h1>₱193,000</h1>
+              <span class="revenue-growth"><i class="fa-solid fa-arrow-trend-up"></i> +12.5% from last month</span>
             </div>
-            <div>
-              Needs handler assignment
+            <div class="revenue-grid elegant-actions admin-revenue-grid">
+              <div class="revenue-box"><i class="fa-solid fa-mobile-screen"></i><p>GCash</p><h3>₱85,500</h3><span>Digital payments</span></div>
+              <div class="revenue-box"><i class="fa-solid fa-building-columns"></i><p>Bank Transfer</p><h3>₱45,500</h3><span>Confirmed deposits</span></div>
+              <div class="revenue-box"><i class="fa-solid fa-money-bill-wave"></i><p>Cash Payments</p><h3>₱62,000</h3><span>On-site collections</span></div>
             </div>
-            <div>
-              <select
-                class="custom-select status-select">
-                <option selected>
-                  Pending
-                </option>
-                <option>
-                  Review
-                </option>
-                <option>
-                  Confirmed
-                </option>
-              </select>
-            </div>
-            <button class="view-btn">
-              View
-            </button>
-          </div>
-          <!-- ROW -->
-          <div class="booking-row">
-            <div class="client-info">
-              <strong>
-                BK-2024-022
-              </strong>
-              <small>
-                Maria Santos
-              </small>
-            </div>
-            <div>
-              Waiting for status update
-            </div>
-            <div>
-              <select
-                class="custom-select status-select" >
-                <option selected>
-                  Pending
-                </option>
-                <option>
-                  Review
-                </option>
-                <option>
-                  Confirmed
-                </option>
-              </select>
-            </div>
-            <button class="view-btn">
-              View
-            </button>
           </div>
         </section>
-        <!-- RECENT SHIPMENTS -->
-        <section class="card draw-card">
-          <div class="card-header">
-            <div>
-              <h2>
-                Recent Shipments
-              </h2>
-              <p>
-                Latest shipment records
-              </p>
-            </div>
+
+        <section class="card revenue-card elegant-card quick-action-card">
+          <div class="card-header"><div><h2>Admin Actions</h2><p>Manage operations faster.</p></div></div>
+          <div class="revenue-grid elegant-actions">
+            <a href="pending-bookings.html" class="revenue-box"><i class="fa-solid fa-clipboard-check"></i><p>Review</p><h3>Bookings</h3><span>Approve pending requests</span></a>
+            <a href="pending-shipments.html" class="revenue-box"><i class="fa-solid fa-route"></i><p>Assign</p><h3>Shipments</h3><span>Prepare dispatch schedule</span></a>
+            <a href="accounting.html" class="revenue-box"><i class="fa-solid fa-wallet"></i><p>Check</p><h3>Accounting</h3><span>Track payment records</span></a>
           </div>
-          <!-- ROW -->
-          <div class="booking-row">
-            <div class="client-info">
-              <strong>
-                BK-2024-001
-              </strong>
-              <small>
-                Juan Dela Cruz
-              </small>
-            </div>
-            <div>
-              Chicken - 120 pcs
-            </div>
-            <div>
-              ₱12,500
-            </div>
-            <div>
-              <select
-                class="custom-select status-select" >
-                <option selected>
-                  Confirmed
-                </option>
-                <option>
-                  Pending
-                </option>
-                <option>
-                  Review
-                </option>
-              </select>
-            </div>
-            <button class="view-btn">
-              View
-            </button>
-          </div>
-          <!-- ROW -->
-          <div class="booking-row">
-            <div class="client-info">
-              <strong>
-                BK-2024-002
-              </strong>
-              <small>
-                Maria Santos
-              </small>
-            </div>
-            <div>
-              Pig - 8 heads
-            </div>
-            <div>
-              ₱18,000
-            </div>
-            <div>
-              <select
-                class="custom-select status-select">
-                <option selected>
-                  Review
-                </option>
-                <option>
-                  Pending
-                </option>
-                <option>
-                  Confirmed
-                </option>
-              </select>
-            </div>
-            <button class="view-btn">
-              View
-            </button>
-          </div>
+        </section>
+      </div>
+
+      <section class="card financing-card elegant-card admin-overview-card">
+        <div class="card-header">
+          <div><h2>Shipment Overview</h2><p>January 2024 - May 2024</p></div>
+        </div>
+        <div class="overview-progress">
+          <div class="overview-item"><div><strong>Monthly Shipments</strong><span>245 active and completed shipments</span></div><b>82%</b></div>
+          <div class="progress-track"><div class="progress-fill" style="width:82%"></div></div>
+          <div class="overview-item"><div><strong>Pending Bookings</strong><span>32 requests awaiting confirmation</span></div><b>43%</b></div>
+          <div class="progress-track"><div class="progress-fill medium" style="width:43%"></div></div>
+          <div class="overview-item"><div><strong>Pending Shipments</strong><span>18 shipments awaiting dispatch</span></div><b>31%</b></div>
+          <div class="progress-track"><div class="progress-fill light" style="width:31%"></div></div>
+        </div>
+      </section>
+
+      <div class="dashboard-two-grid elegant-two-grid">
+        <section class="card elegant-card">
+          <div class="card-header"><div><h2>Pending Booking Tasks</h2><p>Requires admin action</p></div></div>
+          <div class="booking-row elegant-row"><div class="client-info"><strong>BK-2024-021</strong><small>Juan Dela Cruz</small></div><div>Needs handler assignment</div><div><select class="custom-select status-select"><option selected>Pending</option><option>Review</option><option>Confirmed</option></select></div><button class="view-btn">View</button></div>
+          <div class="booking-row elegant-row"><div class="client-info"><strong>BK-2024-022</strong><small>Maria Santos</small></div><div>Waiting for status update</div><div><select class="custom-select status-select"><option selected>Pending</option><option>Review</option><option>Confirmed</option></select></div><button class="view-btn">View</button></div>
+        </section>
+
+        <section class="card draw-card elegant-card">
+          <div class="card-header"><div><h2>Recent Shipments</h2><p>Latest shipment records</p></div></div>
+          <div class="booking-row elegant-row"><div class="client-info"><strong>BK-2024-001</strong><small>Juan Dela Cruz</small></div><div>Chicken - 120 pcs</div><div>₱12,500</div><div><select class="custom-select status-select"><option selected>Confirmed</option><option>Pending</option><option>Review</option></select></div><button class="view-btn">View</button></div>
+          <div class="booking-row elegant-row"><div class="client-info"><strong>BK-2024-002</strong><small>Maria Santos</small></div><div>Pig - 8 heads</div><div>₱18,000</div><div><select class="custom-select status-select"><option selected>Review</option><option>Pending</option><option>Confirmed</option></select></div><button class="view-btn">View</button></div>
         </section>
       </div>
     </main>
