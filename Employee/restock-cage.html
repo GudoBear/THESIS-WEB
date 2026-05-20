@@ -39,7 +39,7 @@
                 <span class="icon">
                     <i class="bi bi-box"></i>
                 </span>
-                <span class="description">Container   <i class="bi bi-caret-down-fill"></i></span>
+                <span class="description-active">Container   <i class="bi bi-caret-down-fill"></i></span>
             </a>
 
             <div class="sub-menu collapse" id="submenu">
@@ -55,7 +55,7 @@
                     <span class="icon">
                         <i class="bi bi-grid-3x3"></i>
                     </span>
-                    <span class="description">Cage</span> 
+                    <span class="description-active">Cage</span> 
                     
                 </a>
             </div>
@@ -65,7 +65,7 @@
                 <span class="icon">
                     <i class="bi bi-prescription"></i>
                 </span>
-                <span class="description-active">Medicine</span>
+                <span class="description">Medicine</span>
             </a>
 
             <a class="nav-link" href="feeds.html">
@@ -90,96 +90,110 @@
 <div class="container-fluid px-4">
     
     <div class="main-content row gx-4 gy-4">
-
-      <nav class="navbar navbar-expand-lg bg-body-secondary">
+ <nav class="navbar navbar-expand-lg bg-body-secondary">
         <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="medicine.html">Summary</a>
+          <a class="nav-link" aria-current="page" href="cages.html">Summary</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="opened-med.html">Medicine Status</a>
+          <a class="nav-link" href="reserved-cages.html">Reserved Cages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="med-type.html">Medicine Category</a>
+          <a class="nav-link active" href="restock-cage.html">Restock Cages</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="restock-med.html">Need for Restock</a>
-        </li>
-        
         
       </ul>
     </div>
     </nav>
 
-        <div class="overview-cards">
-            <div class="overview-card card-medicine">
-                <p class="count">128</p>
-                <h2>Total Medicine</h2>
+    <div class="card text-center">
+        <h4 class="card-header mb-2">Add Stock</h4>
+         
+            <form class="py-3 px-5">
+                <div class="row g-3 align-items-center">
+            <div class="col">
+                <label for="reservebox" class="col-form-label">Select Cage Size</label>
             </div>
-            <div class="overview-card card-instock">
-                <p class="count">42</p>
-                <h2>In stock</h2>
+                <div class="col">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Cage Size</option>
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                </select>
             </div>
-
-             <div class="overview-card card-lowstock">
-                <p class="count">4</p>
-                <h2>Low stock</h2>
-            </div>
-
-            <div class="overview-card card-outstock">
-                <p class="count">217</p>
-                <h2>Out of stock</h2>
-            </div>
+            <div class="col">
+      <button type="submit" class="btn btn-primary">Add Stock</button>
+      </div>
+      </div>
+            </form>
         </div>
-    
+        <div class="card text-center">
+        <h4 class="card-header mb-2">Add Quantity</h4>
+         
+            <form class="py-3 px-5">
+                <div class="row g-3 align-items-center">
+            <div class="col">
+                <label for="box" class="col-form-label">Select Cage:</label>
+            </div>
+                <div class="col">
+                <select class="form-select" aria-label="Default select example">
+  <option selected>Cage ID</option>
+  <option value="1">[550] Small</option>
+  <option value="2">[660] Medium</option>
+  <option value="3">[770] Large</option>
+</select>
+            </div>
+             <div class="col">
+                <label for="box" class="col-form-label">Enter Quantity:</label>
+            </div>
+             <div class="col">
+                <input type="number" id="quantity" class="form-control" aria-describedby="quantity" placeholder="quantity">
+            </div>
+            <div class="col">
+      <button type="submit" class="btn btn-primary">Add Quantity</button>
+      </div>
+      </div>
+            </form>
+        </div>
+
+        
     <div class="card p-4">
         
-            <h2 class="card-title">Medicines to Restock</h2>
-            <p class="text-muted">click restocked once may new na, for tracking toh ng restocking</p>
-            
-         <table class="table table-striped mt-4">
+        
+        <h2 class="card-title text-center mb-3">Need for a Restock Cages</h2>
+        <p class="text-muted text-center fst-italic">stocks that are 5 and below</p>
+        
+        <table class="table table-striped text-center mt-4">
     <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Medicine Name</th>
-            <th scope="col">Medicine Type</th>
+            <th scope="col">Cage id</th>
+            <th scope="col">Cage Size</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Medicine Status</th>
-            <th scope="col">Action</th>
+            <th scope="col">Stock Status</th>
+            
             
         </tr>
     </thead>
     <tbody>
         <tr>
             <th scope="row">1</th>
-            <td>Amoxicillin</td>
-            <td>Antibiotic</td>
-            <td>2</td>
-            <td>Low Stock</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Restocked</button>
-            </td>
+            <td>small</td>
+            <td>5</td>
+            <td>Low-Stock</td>
         </tr>
-        <tr>
+       <tr>
             <th scope="row">2</th>
-            <td>Vitamin C</td>
-            <td>Vitamins</td>
-            <td>10</td>
-            <td>Low stock</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Restocked</button>
-            </td>
+            <td>medium</td>
+            <td>0</td>
+            <td>Out of Stock</td>
         </tr>
         <tr>
             <th scope="row">3</th>
-            <td>Influenza Vaccine</td>
-            <td>Vaccine</td>
+            <td>large</td>
             <td>5</td>
-            <td>Low stock</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Restocked</button>
-            </td>
+            <td>Low-Stock</td>
         </tr>
     </tbody>
 </table>
@@ -189,6 +203,7 @@
    
 </div>
 </div>
+
 
 
 </main>

@@ -99,10 +99,42 @@
         <li class="nav-item">
           <a class="nav-link" href="reserved-boxes.html">Reserved Boxes</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="restock-box.html">Restock Boxes</a>
+        </li>
         
       </ul>
     </div>
     </nav>
+
+    <h2 class="card-title text-center mb-3">Available Boxes</h2>
+        <div class="overview-cards">
+            <div class="overview-card">
+                <p class="count">16</p>
+                <h2>Total Available Boxes</h2>
+            </div>
+            <div class="overview-card">
+                <p class="count">5</p>
+                <h2>Small</h2>
+            </div>
+            <div class="overview-card card-medicine">
+                <p class="count">6</p>
+                <h2>Medium</h2>
+            </div>
+            <div class="overview-card card-medicine">
+                <p class="count">5</p>
+                <h2>Large</h2>
+            </div>
+            <div class="overview-card card-medicine">
+                <p class="count">5</p>
+                <h2>Extra Large</h2>
+            </div>
+            <div class="overview-card card-medicine">
+                <p class="count">5</p>
+                <h2>XX-Large</h2>
+            </div>
+        </div>
+        
     <div class="card text-center">
         <h4 class="card-header mb-2">Add Box</h4>
          
@@ -113,11 +145,13 @@
             </div>
                 <div class="col">
                 <select class="form-select" aria-label="Default select example">
-  <option selected>Box Size</option>
-  <option value="1">Small</option>
-  <option value="2">Medium</option>
-  <option value="3">Large</option>
-</select>
+                    <option selected>Box Size</option>
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                    <option value="3">Extra Large</option>
+                    <option value="3">XX-Large</option>
+                </select>
             </div>
             <div class="col">
       <button type="submit" class="btn btn-primary">Add Box</button>
@@ -136,9 +170,9 @@
                 <div class="col">
                 <select class="form-select" aria-label="Default select example">
   <option selected>Box ID</option>
-  <option value="1">[550] Small</option>
-  <option value="2">[660] Medium</option>
-  <option value="3">[770] Large</option>
+  <option value="1">[1] Small</option>
+  <option value="2">[2] Medium</option>
+  <option value="3">[3] Large</option>
 </select>
             </div>
              <div class="col">
@@ -157,31 +191,15 @@
         
     <div class="card p-4">
         
-        <h2 class="card-title text-center mb-3">Available Boxes</h2>
-        <div class="overview-cards">
-            <div class="overview-card">
-                <p class="count">16</p>
-                <h2>Total Available Boxes</h2>
-            </div>
-            <div class="overview-card">
-                <p class="count">5</p>
-                <h2>Small</h2>
-            </div>
-            <div class="overview-card card-medicine">
-                <p class="count">6</p>
-                <h2>Medium</h2>
-            </div>
-            <div class="overview-card card-medicine">
-                <p class="count">5</p>
-                <h2>Large</h2>
-            </div>
-        </div>
+        
         <table class="table table-striped mt-4">
     <thead>
         <tr>
+            <th scope="col">Inventory id</th>
             <th scope="col">Box id</th>
             <th scope="col">Box Size</th>
             <th scope="col">Quantity</th>
+            <th scope="col">Stock Status</th>
             <th scope="col">Processed By</th>
             <th scope="col">Last Updated</th>
             <th scope="col">Action</th>
@@ -191,8 +209,10 @@
     <tbody>
         <tr>
             <th scope="row">1</th>
+            <th scope="row">1</th>
             <td>small</td>
             <td>5</td>
+            <td>In-stock</td>
             <td>Dr. Smith</td>
             <td>2023-10-01</td>
             <td>
@@ -202,8 +222,10 @@
         </tr>
        <tr>
             <th scope="row">2</th>
+            <th scope="row">2</th>
             <td>medium</td>
-            <td>6</td>
+            <td>3</td>
+            <td>Low stock</td>
             <td>Dr. Smith</td>
             <td>2023-10-01</td>
             <td>
@@ -213,8 +235,10 @@
         </tr>
         <tr>
             <th scope="row">3</th>
+            <th scope="row">3</th>
             <td>large</td>
-            <td>5</td>
+            <td>0</td>
+            <td>Out of stock</td>
             <td>Dr. Smith</td>
             <td>2023-10-01</td>
             <td>

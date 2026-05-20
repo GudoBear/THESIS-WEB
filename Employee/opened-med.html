@@ -100,14 +100,15 @@
           <a class="nav-link" aria-current="page" href="medicine.html">Summary</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" href="opened-med.html">Medicine Status</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="med-type.html">Medicine Category</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="restock-med.html">Need for Restock</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="opened-med.html">Medicine Status</a>
-        </li>
+        
         
       </ul>
     </div>
@@ -121,23 +122,22 @@
             </div>
             <div class="overview-card card-inuse">
                 <p class="count">42</p>
-                <h2>In-use medicines</h2>
+                <h2>Opened Medicines</h2>
             </div>
             <div class="overview-card card-stored">
                 <p class="count">217</p>
-                <h2>Stored medicines</h2>
+                <h2>Stored Medicine</h2>
             </div>
             <div class="overview-card card-consumed">
                 <p class="count">89</p>
                 <h2>Consumed</h2>
             </div>
         </div>
-    
-    <div class="card p-4">
+
+         <div class="card p-4">
         
-        <h2 class="card-title">Medicine Status <button class="btn btn-primary float-end">Open Medicines</button></h2>
-        <p class="fst-italic text-muted">if status changes to consumed, mawawala na sa list then malalagay sa consumed count.</p>
-        <p class="text-muted">open medicines: inventory id, med id, click button open</p>
+        <h2 class="card-title">Stored Medicines<button class="btn btn-primary float-end">Open Medicine</button></h2>
+        <p class="text-muted">open meds: inventory id, med id, click button open</p>
             
          <table class="table table-striped mt-4">
     <thead>
@@ -146,10 +146,6 @@
             <th scope="col">Medicine ID</th>
             <th scope="col">Medicine Name</th>
             <th scope="col">Medicine Type</th>
-            <th scope="col">Medicine Status</th>
-            <th scope="col">Processed By</th>
-            <th scope="col">Processed date</th>
-            <th scope="col">Action</th>
             
         </tr>
     </thead>
@@ -157,41 +153,72 @@
         <tr>
             <th scope="row">3</th>
             <td>4</td>
-            <td>Influenza Vaccine</td>
-            <td>Vaccine</td>
-            <td>In-use</td>
-            <td>ayet</td>
-            <td>2023-10-01</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
+            <td>Vitamin C</td>
+            <td>Vitamins</td>
         </tr>
+    </tbody>
+</table>
+
+    </div>
+    
+    <div class="card p-4">
+        
+        <h2 class="card-title">Opened Medicines <button class="btn btn-primary float-end">Consumed Medicines</button></h2>
+        <p class="fst-italic text-muted">click consumed Medicines then papipiliin what inventory id and feeds id, name, mawawala na sa list then malalagay sa consumed count.</p>
+            
+         <table class="table table-striped mt-4">
+    <thead>
         <tr>
-            <th scope="row">2</th>
-            <td>5</td>
-            <td>Influenza Vaccine</td>
-            <td>Vaccine</td>
-            <td>In-use</td>
-            <td>ayet</td>
-            <td>2023-10-01</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
+            <th scope="col">Inventory ID</th>
+            <th scope="col">Medicine ID</th>
+            <th scope="col">Medicine Name</th>
+            <th scope="col">Medicine Type</th>
+            <th scope="col">Processed By</th>
+            <th scope="col">Processed date</th>
+            
         </tr>
+    </thead>
+    <tbody>
         <tr>
             <th scope="row">3</th>
-            <td>5</td>
-            <td>Influenza Vaccine</td>
+            <td>4</td>
+            <td>Flu Vaccine</td>
             <td>Vaccine</td>
-            <td>Consumed</td>
             <td>ayet</td>
             <td>2023-10-01</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+
+   
+
+    <div class="card p-4">
+        
+        <h2 class="card-title">Consumed Medicines</h2>
+        <p class="fst-italic text-muted">click consumed Medicines then papipiliin what inventory id and feeds id, name, mawawala na sa list then malalagay sa consumed count and consumed list.</p>
+            
+         <table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Inventory ID</th>
+            <th scope="col">Medicine ID</th>
+            <th scope="col">Medicine Name</th>
+            <th scope="col">Medicine Type</th>
+            <th scope="col">Processed By</th>
+            <th scope="col">Processed date</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">3</th>
+            <td>4</td>
+            <td>Flu Vaccine</td>
+            <td>Vaccine</td>
+            <td>ayet</td>
+            <td>2023-10-01</td>
         </tr>
     </tbody>
 </table>

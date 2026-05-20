@@ -88,6 +88,7 @@
 
 <main>
 <div class="container-fluid px-4">
+
     
     <div class="main-content row gx-4 gy-4">
  <nav class="navbar navbar-expand-lg bg-body-secondary">
@@ -99,13 +100,63 @@
         <li class="nav-item">
           <a class="nav-link active" href="reserved-boxes.html">Reserved Boxes</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="restock-box.html">Restock Boxes</a>
+        </li>
         
       </ul>
     </div>
     </nav>
 
+    <div class="card p-4">
+        
+        <h2 class="card-title text-center mb-3">Reserved Box Requests List</h2>
+        <table class="table table-striped text-center mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Booking id</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">Animal Type</th>
+            <th scope="col">Animal Quantity</th>
+            <th scope="col">Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>riz</td>
+            <td>Chicks</td>
+            <td>30</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Done</button>
+            </td>
+        </tr>
+       <tr>
+            <th scope="row">1</th>
+            <td>riz</td>
+            <td>Chicks</td>
+            <td>30</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Done</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>riz</td>
+            <td>Chicks</td>
+            <td>30</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Done</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+
         <div class="card text-center">
-        <h4 class="card-header mb-2">Reserve a Box! (Available Boxes)</h4>
+        <h4 class="card-header mb-2">Reserve a Box!</h4>
          
         <div class="card">
             <form class="py-3">
@@ -115,11 +166,11 @@
             </div>
             <div class="col">
                 <select class="form-select" aria-label="Default select example">
-  <option selected>select client</option>
-  <option value="1">[1] Jean</option>
-  <option value="2">[2] Ayet</option>
-  <option value="3">[3] Margaret</option>
-</select>
+                    <option selected>select client</option>
+                    <option value="1">[1] Jean</option>
+                    <option value="2">[2] Ayet</option>
+                    <option value="3">[3] Margaret</option>
+                </select>
             </div>
             <div class="col">
                 <label for="reservebox" class="col-form-label">Box ID</label>
@@ -133,13 +184,16 @@
       </div>
             </form>
         </div>
-        
+
+        <h4 class="card-header mb-2">Available Boxes</h4>
         <table class="table table-striped mt-4">
     <thead>
         <tr>
             <th scope="col">Small Box ID</th>
             <th scope="col">Medium Box ID</th>
             <th scope="col">Large Box ID</th>
+            <th scope="col">Extra Large Box ID</th>
+            <th scope="col">Double Extra Large Box ID</th>
         </tr>
     </thead>
     <tbody>
@@ -147,16 +201,22 @@
             <th scope="row">550</th>
             <th scope="row">650</th>
             <th scope="row">750</th>
+            <th scope="row">850</th>
+            <th scope="row">950</th>
         </tr>
        <tr>
             <th scope="row">551</th>
             <th scope="row">651</th>
             <th scope="row">751</th>
+            <th scope="row">851</th>
+            <th scope="row">951</th>
         </tr>
         <tr>
             <th scope="row">552</th>
             <th scope="row">651</th>
             <th scope="row">751</th>
+            <th scope="row">851</th>
+            <th scope="row">951</th>
         </tr>
     </tbody>
 </table>
@@ -168,85 +228,7 @@
 
         </div>
         
-    <div class="card p-4">
-        
-        <h2 class="card-title text-center mb-3">Reserved Boxes</h2>
-        <div class="overview-cards">
-            <div class="overview-card">
-                <p class="count">3</p>
-                <h2>Total Reserved Boxes</h2>
-            </div>
-            <div class="overview-card">
-                <p class="count">3</p>
-                <h2>Small</h2>
-            </div>
-            <div class="overview-card card-medicine">
-                <p class="count">0</p>
-                <h2>Medium</h2>
-            </div>
-            <div class="overview-card card-medicine">
-                <p class="count">0</p>
-                <h2>Large</h2>
-            </div>
-        </div>
-        <table class="table table-striped mt-4">
-    <thead>
-        <tr>
-            <th scope="col">Booking id</th>
-            <th scope="col">Client Name</th>
-            <th scope="col">Box id</th>
-            <th scope="col">Box Size</th>
-            <th scope="col">Container Status</th>
-            <th scope="col">Processed By</th>
-            <th scope="col">Last Updated</th>
-            <th scope="col">Action</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>riz</td>
-            <td>505</td>
-            <td>small</td>
-            <td>available</td>
-            <td>Dr. Smith</td>
-            <td>2023-10-01</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
-        </tr>
-       <tr>
-            <th scope="row">2</th>
-            <td>riz</td>
-            <td>505</td>
-            <td>small</td>
-            <td>reserved</td>
-            <td>Dr. Smith</td>
-            <td>2023-10-01</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>riz</td>
-            <td>505</td>
-            <td>small</td>
-            <td>available</td>
-            <td>Dr. Smith</td>
-            <td>2023-10-01</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-    </div>
+    
 
    
 </div>
